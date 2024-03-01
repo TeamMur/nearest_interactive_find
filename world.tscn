@@ -1,0 +1,1012 @@
+[gd_scene load_steps=7 format=3 uid="uid://rff2k6rjsl1v"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_5016u"]
+[ext_resource type="Script" path="res://InteractiveZone.gd" id="2_mtsvr"]
+[ext_resource type="Script" path="res://InteractiveObject.gd" id="3_1xxlf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wlxo7"]
+radius = 25.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_inck2"]
+radius = 121.594
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cq1lx"]
+radius = 15.0
+
+[node name="world" type="Node"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(617, 278)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_5016u")
+speed = 20.0
+
+[node name="Collision" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_wlxo7")
+debug_color = Color(0, 0.65098, 0.117647, 0.419608)
+
+[node name="InteractiveZone" type="Area2D" parent="Player"]
+script = ExtResource("2_mtsvr")
+
+[node name="Collision" type="CollisionShape2D" parent="Player/InteractiveZone"]
+shape = SubResource("CircleShape2D_inck2")
+debug_color = Color(0.776471, 0.188235, 0.964706, 0.419608)
+
+[node name="Lines" type="Node2D" parent="Player/InteractiveZone"]
+
+[node name="InteractObjects" type="Node2D" parent="."]
+
+[node name="1" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(64, 64)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/1"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/1"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="2" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(64, 192)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/2"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/2"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="3" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(64, 320)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/3"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/3"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="4" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(64, 448)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/4"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/4"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="5" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(64, 576)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/5"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/5"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="6" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(64, 704)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/6"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/6"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="7" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(192, 0)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/7"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/7"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="8" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(192, 128)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/8"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/8"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="9" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(192, 256)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/9"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/9"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="10" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(192, 384)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/10"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/10"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="11" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(192, 512)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/11"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/11"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="12" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(192, 640)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/12"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/12"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="13" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(320, 64)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/13"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/13"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="14" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(320, 192)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/14"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/14"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="15" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(320, 320)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/15"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/15"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="16" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(320, 448)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/16"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/16"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="17" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(320, 576)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/17"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/17"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="18" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(320, 704)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/18"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/18"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="19" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(448, 0)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/19"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/19"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="20" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(448, 128)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/20"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/20"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="21" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(448, 256)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/21"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/21"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="22" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(448, 384)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/22"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/22"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="23" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(448, 512)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/23"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/23"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="24" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(448, 640)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/24"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/24"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="25" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(576, 64)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/25"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/25"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="26" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(576, 192)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/26"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/26"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="27" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(576, 320)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/27"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/27"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="28" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(576, 448)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/28"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/28"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="29" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(576, 576)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/29"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/29"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="30" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(576, 704)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/30"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/30"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="31" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(704, 0)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/31"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/31"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="32" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(704, 128)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/32"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/32"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="33" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(704, 256)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/33"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/33"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="34" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(704, 384)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/34"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/34"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="35" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(704, 512)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/35"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/35"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="36" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(704, 640)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/36"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/36"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="37" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(832, 64)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/37"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/37"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="38" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(832, 192)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/38"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/38"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="39" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(832, 320)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/39"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/39"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="40" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(832, 448)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/40"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/40"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="41" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(832, 576)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/41"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/41"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="42" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(832, 704)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/42"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/42"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="43" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(960, 0)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/43"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/43"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="44" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(960, 128)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/44"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/44"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="45" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(960, 256)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/45"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/45"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="46" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(960, 384)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/46"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/46"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="47" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(960, 512)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/47"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/47"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="48" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(960, 640)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/48"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/48"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="49" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(1088, 64)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/49"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/49"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="50" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(1088, 192)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/50"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/50"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="51" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(1088, 320)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/51"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/51"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="52" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(1088, 448)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/52"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/52"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="53" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(1088, 576)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/53"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/53"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="54" type="StaticBody2D" parent="InteractObjects" groups=["Interactive"]]
+position = Vector2(1088, 704)
+script = ExtResource("3_1xxlf")
+
+[node name="Collision" type="CollisionShape2D" parent="InteractObjects/54"]
+shape = SubResource("CircleShape2D_cq1lx")
+debug_color = Color(0.588235, 0.54902, 0, 0.419608)
+
+[node name="Label" type="Label" parent="InteractObjects/54"]
+offset_left = -20.0
+offset_top = -37.0
+offset_right = 20.0
+offset_bottom = -11.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="Player/InteractiveZone" to="Player/InteractiveZone" method="_on_body_entered"]
+[connection signal="body_exited" from="Player/InteractiveZone" to="Player/InteractiveZone" method="_on_body_exited"]
